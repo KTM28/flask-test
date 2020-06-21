@@ -43,5 +43,7 @@ def careers():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
+from os import path
+if path.exists("env.py"):
+    import env
 
