@@ -41,9 +41,6 @@ def careers():
     return render_template("careers.html", page_title="Careers")
 
 if __name__ == "__main__":
-    app.run(debug=True)
-
-from os import path
-if path.exists("env.py"):
-    import env
-
+    app.run(host=os.environ.get("IP"),
+        port=(os.environ.get("PORT")),
+        debug=True)
